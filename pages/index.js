@@ -1,4 +1,9 @@
+import React, { useEffect } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
+import styles from "../styles/Home.module.css";
+import mks from "../public/assets/mks.png";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -11,8 +16,22 @@ export default function Home() {
           integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossOrigin="anonymous"></link>
       </Head>
 
-      <div className="container">
-
+      <div className={styles.container}>
+        <div className={styles.text__container}>
+          <h2 className={styles.heading}>Hi<span className={styles.wave}>👋</span>, I&apos;m</h2>
+          <h1 className={styles.gradient__text}>Mohit Kumar Singh</h1>
+          <br />
+          <h2 className={styles.default}>Web Developer</h2>
+          <p>Intermediate at - React. Love to play with DOMS.
+            <br />Trying to Build something new
+          </p>
+          <br />
+          <Link href="/" ><a className={styles.btn}><span>Resume</span></a></Link>
+          <div className={styles.sectionDivider} />
+        </div>
+        <div className={styles.image__container}>
+          <Image src={mks} alt="MKS" width="380px" height="380px" />
+        </div>
       </div>
 
     </div>

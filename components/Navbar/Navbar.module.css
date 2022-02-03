@@ -1,5 +1,5 @@
 .container {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -31,4 +31,10 @@
 .button:hover i {
     /* box-shadow: 0 0 5px 0 cyan; */
     text-shadow: 0 0 15px #00f3ff;
+}
+
+@media screen and (max-width: 678px) {
+    .container {
+        display: none;
+    }
 }

@@ -1,0 +1,236 @@
+.container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 8rem;
+    max-height: max-content;
+    gap: 10px;
+}
+
+.text__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.image__container {
+    border-radius: 50%;
+    box-shadow: 0 0 15px gray;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image__container img {
+    max-width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.wave {
+    animation: wave-animation 2.1s infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.gradient__text {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 3.875rem;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+}
+
+.default {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.text__container p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 28px;
+    color: var(--color-text);
+    margin: 24px 0 8px 0;
+}
+
+/* Button Hover */
+.btn {
+    position: relative;
+    display: inline-flex;
+    max-width: fit-content;
+    padding: 10px 30px;
+    background: transparent;
+    border-radius: 8px;
+    border: 2px solid #2196f3;
+    color: rgba(255, 255, 255, 0.92);
+    text-decoration: none;
+    letter-spacing: 2px;
+    overflow: hidden;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: #2196f3;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::before {
+    width: 9rem;
+    height: 9rem;
+}
+
+.sectionDivider {
+    width: 64px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #fff;
+    /* background: linear-gradient(270deg, #F46737 0%, #945DD6 100%); */
+    background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+    margin: 48px 0;
+}
+
+
+/* Media */
+
+@media screen and (max-width: 1181px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .gradient__text {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1086px) {
+    .heading {
+        font-size: 2.2rem;
+    }
+
+    .gradient__text {
+        font-size: 2.8rem;
+    }
+
+    .text__container p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1039px) {
+    .heading {
+        font-size: 2.2rem;
+    }
+
+    .gradient__text {
+        font-size: 2.7rem;
+    }
+
+    .text__container p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1039px) {
+    .image__container {
+        margin: 0 auto;
+    }
+
+    .heading {
+        font-size: 2.8rem;
+    }
+
+    .gradient__text {
+        font-size: 3rem;
+    }
+
+    .text__container p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .container{
+        padding: 3rem 2rem;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    .gradient__text{
+        font-size: 2.8rem;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 324px) {
+    .gradient__text{
+        font-size: 2.5rem;
+        line-height: 60px;
+    }
+}

@@ -5,7 +5,7 @@ import Navbar from './Navbar/Navbar';
 function Layout({ children }) {
     return (
         <>
-            <Navbar />
+            <Navbar className="navbar" />
             <Header />
             {children}
         </>
