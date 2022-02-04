@@ -9,16 +9,16 @@ function Navbar() {
     return (
         <div className={styles.container}>
             <div className={styles.button}>
-                <Link style={{ color: `${router.pathname === '/' ? "red" : "cyan"}` }} passHref href="/"><i style={{ color: `${router.pathname === '/' ? "red" : "cyan"}` }} className="fas fa-house-damage" /></Link>
+                <Link passHref href="#home"><i style={{ color: `${router.pathname === '/' ? "red" : "cyan"}` }} className="fas fa-house-damage" /></Link>
             </div>
             <div className={styles.button}>
-                <Link style={{ color: `${router.pathname === '/about' ? "red" : "cyan"}` }} passHref href="/about"><i style={{ color: `${router.pathname === '/about' ? "red" : "cyan"}` }} className="fas fa-user-tie" /></Link>
+                <Link passHref href="#about"><i style={{ color: `${router.pathname === '/about' ? "red" : "cyan"}` }} className="fas fa-user-tie" /></Link>
             </div>
             <div className={styles.button}>
-                <Link style={{ color: `${router.pathname === '/projects' ? "red" : "cyan"}` }} passHref href="/projects"><i style={{ color: `${router.pathname === '/projects' ? "red" : "cyan"}` }} className="fas fa-laptop-code" /></Link>
+                <Link passHref href="#projects"><i style={{ color: `${router.pathname === '/projects' ? "red" : "cyan"}` }} className="fas fa-laptop-code" /></Link>
             </div>
             <div className={styles.button}>
-                <Link style={{ color: `${router.pathname === '/contact' ? "red" : "cyan"}` }} passHref href="/contact"><i style={{ color: `${router.pathname === '/contact' ? "red" : "cyan"}` }} className="far fa-address-card" /></Link>
+                <Link passHref href="#contact"><i style={{ color: `${router.pathname === '/contact' ? "red" : "cyan"}` }} className="far fa-address-card" /></Link>
             </div>
         </div>
     );
