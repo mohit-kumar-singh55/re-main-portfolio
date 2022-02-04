@@ -33,7 +33,6 @@ body {
   max-width: 1550px;
   min-height: 100vh;
   margin: 0 auto;
-  position: relative;
   font-family: var(--font-family);
   color: rgba(255, 255, 255, 0.92);
   background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 42%);
