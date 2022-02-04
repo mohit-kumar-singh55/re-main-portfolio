@@ -58,8 +58,33 @@ export default function Home() {
             <p><em><strong>~Thank you for your time</strong></em></p>
           </div>
         </div>
-        <div className={styles.grid__box}>
-          This is the gird box
+
+        <div className={styles.languages}>
+          <div className={styles.language__heading}>Technologies</div>
+          <div className={styles.circle__container}>
+            <span className={styles.circle}>React</span>
+            <span className={styles.circle}>NextJS</span>
+            <span className={styles.circle}>MongoDB</span>
+            <span className={styles.circle}>NodeJS</span>
+          </div>
+        </div>
+        <div className={styles.languages}>
+          <div className={styles.language__heading}>Languages</div>
+          <div className={styles.circle__container}>
+            <span className={styles.circle}>Java</span>
+            <span className={styles.circle}>JavaScript</span>
+            <span className={styles.circle}>Python</span>
+            <span className={styles.circle}>TypeScript</span>
+            <span className={styles.circle}>C++</span>
+          </div>
+        </div>
+        <div className={styles.languages}>
+          <div className={styles.language__heading}>Speaking Languages</div>
+          <div className={styles.circle__container}>
+            <span className={styles.circle}>Hindi</span>
+            <span className={styles.circle}>English</span>
+            <span className={styles.circle}>Japanese</span>
+          </div>
         </div>
       </div>
 
