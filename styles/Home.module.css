@@ -446,7 +446,7 @@
 .contact__media__links {
     display: flex;
     justify-content: space-evenly;
-    min-width: 300px;
+    min-width: 250px;
     width: 500px;
 }
 
