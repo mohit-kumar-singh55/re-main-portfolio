@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from "../styles/Home.module.css";
 import mks from "../public/assets/mks.png";
 import Link from 'next/link';
+import { projects } from "../constants/constants";
 
 export default function Home() {
   return (
@@ -85,6 +86,38 @@ export default function Home() {
             <span className={styles.circle}>English</span>
             <span className={styles.circle}>Japanese</span>
           </div>
+        </div>
+      </div>
+
+      <div className={styles.customDivider} />
+
+      {/* projects */}
+      <div className={styles.container__projects} id="projects">
+        <div className={styles.projects__heading}>Projects</div>
+        <div className={styles.projects}>
+
+          {projects && projects.map((item) => (
+            <div className={styles.project__card} key={item.title}>
+              <Image src={item.image} alt="Projects" />
+              <div className={styles.titleContent}>
+                <div className={styles.box__heading}><h2>{item.title}</h2></div>
+                <div className={styles.hr} />
+              </div>
+              <div className={styles.cardInfo}>{item.description}</div>
+              <div>
+                <div className={`${styles.titleContent} ${styles.stack}`}>Stack</div>
+                <ul className={styles.tagList}>
+                  {item.tags.map((tag, i) => (
+                    <li className={styles.tag} key={i}>{tag}</li>
+                  ))}
+                </ul>
+              </div>
+              <ul className={styles.utilityList}>
+                <a href={item.visit} target="_blank" rel="noreferrer" className={styles.btn}><span>Live</span></a>
+                <a href={item.source} target="_blank" rel="noreferrer" className={styles.btn}><span>Code</span></a>
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
 
