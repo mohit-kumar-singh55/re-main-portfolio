@@ -121,6 +121,37 @@ export default function Home() {
         </div>
       </div>
 
+      <div className={styles.customDivider} />
+
+      {/* Contact */}
+      <div className={styles.contact__container} id="contact">
+        <div className={styles.box}>
+          <div className={styles.dot__container}>
+            <span className={styles.dot} />
+            <span className={styles.dot} />
+            <span className={styles.dot} />
+          </div>
+          <div className={styles.box__heading}><h3>Contact Me</h3></div>
+          <div className={styles.contact__box__content}>
+            <div className={styles.contact__box}>
+              <div className={styles.links}>
+                <h4 className={styles.linkTitle}>Call</h4>
+                <a className={styles.linkItem} href="tel:9105577623">9105577623</a>
+              </div>
+              <div className={styles.links}>
+                <h4 className={styles.linkTitle}>Email </h4>
+                <a className={styles.linkItem} href="mailto:mohitkumarsingh12344@gmail.com">mohitkumarsingh12344@gmail.com</a>
+              </div>
+            </div>
+            <div className={styles.contact__media__links}>
+              <a href="https://instagram.com/sniper.mks_55" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/mohit-kumar-singh-128ab4217/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/mohit-kumar-singh55" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }
