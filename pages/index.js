@@ -125,8 +125,6 @@ export default function Home() {
             <span className={styles.circle}>Java</span>
             <span className={styles.circle}>JavaScript</span>
             <span className={styles.circle}>Python</span>
-            <span className={styles.circle}>TypeScript</span>
-            <span className={styles.circle}>C++</span>
           </div>
         </div>
         <div className={styles.languages}>
