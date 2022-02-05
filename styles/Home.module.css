@@ -440,7 +440,7 @@
 
 .linkItem:hover {
     color: #fff;
-    left: 6px;
+    transform: scale(1.05);
 }
 
 .contact__media__links {
@@ -566,17 +566,17 @@
 }
 
 @media screen and (max-width: 464px) {
-    .linkTitle{
+    .linkTitle {
         font-size: 14px;
     }
 
-    .linkItem{
+    .linkItem {
         font-size: 14px;
     }
 }
 
 @media screen and (max-width: 425px) {
-    .contact__box__content{
+    .contact__box__content {
         padding: 10px;
     }
 }
@@ -588,7 +588,7 @@
         height: 120px;
     }
 
-    .contact__box__content{
+    .contact__box__content {
         padding: 0;
     }
 }
