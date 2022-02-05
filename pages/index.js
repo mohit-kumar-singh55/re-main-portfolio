@@ -6,8 +6,7 @@ import mks from "../public/assets/mks.png";
 import Link from 'next/link';
 import { projects } from "../constants/constants";
 import TypeIt from "typeit-react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export default function Home() {
   // Home Animation
@@ -29,18 +28,6 @@ export default function Home() {
         staggerChildren: 0.5,
       }
     }
-  }
-
-  // About Animation
-  const { inView, entry, ref } = useInView();
-  const animationControl = useAnimation();
-  if (inView) {
-    animationControl.start({
-      x: 0,
-      transition: {
-        delay: 0.7,
-      }
-    });
   }
 
   return (
@@ -89,8 +76,8 @@ export default function Home() {
       </motion.div>
 
       {/* About */}
-      <div ref={ref} className={styles.container__about} id="about">
-        <motion.div initial={{ x: "100vw" }} animate={animationControl} className={styles.box}>
+      <div className={styles.container__about} id="about">
+        <div className={styles.box}>
           <div className={styles.dot__container}>
             <span className={styles.dot} />
             <span className={styles.dot} />
@@ -121,7 +108,7 @@ export default function Home() {
                 }} />
             </strong></em></p>
           </div>
-        </motion.div>
+        </div>
 
         <div className={styles.languages}>
           <div className={styles.language__heading}>Technologies</div>
@@ -160,7 +147,7 @@ export default function Home() {
         <div className={styles.projects}>
 
           {projects && projects.map((item) => (
-            <div  className={styles.project__card} key={item.title}>
+            <div className={styles.project__card} key={item.title}>
               <Image src={item.image} alt="Projects" />
               <div className={styles.titleContent}>
                 <div className={styles.box__heading}><h2>{item.title}</h2></div>
