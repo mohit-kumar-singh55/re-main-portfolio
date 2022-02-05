@@ -8,9 +8,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^6.2.4",
     "next": "12.0.10",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "typeit-react": "^2.1.1"
   },
   "devDependencies": {
     "eslint": "8.8.0",

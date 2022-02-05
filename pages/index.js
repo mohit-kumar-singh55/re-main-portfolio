@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import mks from "../public/assets/mks.png";
 import Link from 'next/link';
 import { projects } from "../constants/constants";
+import TypeIt from "typeit-react";
 
 export default function Home() {
   return (
@@ -23,7 +24,23 @@ export default function Home() {
           <h2 className={styles.heading}>Hi<span className={styles.wave}>👋</span>, I&apos;m</h2>
           <h1 className={styles.gradient__text}>Mohit Kumar Singh</h1>
           <br />
-          <h2 className={styles.default}>Web Developer</h2>
+          <h2 className={styles.default}>
+            <TypeIt
+              options={{
+                speed: 200,
+                loop: true,
+                waitUntilVisible: true,
+              }}
+              getBeforeInit={(instance) => {
+                instance.pause(500).type("Full Stack Developer")
+                  .pause(1000).move(-10).delete(10).pause(500).type("React")
+                  .pause(1000).delete(5).type("App")
+                  .pause(1000).move(10).delete(13)
+                  .pause(1000).type("Freelancer")
+                  .pause(1000).delete(10).type("Java Developer");
+                return instance;
+              }} />
+          </h2>
           <p>Intermediate at - React. Love to play with DOMS.
             <br />Trying to Build something new
           </p>
@@ -56,7 +73,18 @@ export default function Home() {
             <br />
             <p>Looking forward to gain some experience</p>
             <br />
-            <p><em><strong>~Thank you for your time</strong></em></p>
+            <p><em><strong>
+              <TypeIt
+                options={{
+                  speed: 200,
+                  loop: true,
+                  waitUntilVisible: true,
+                }}
+                getBeforeInit={(instance) => {
+                  instance.options({ speed: 150 }).pause(500).type("~Thank you for your time").pause(500);
+                  return instance;
+                }} />
+            </strong></em></p>
           </div>
         </div>
 
