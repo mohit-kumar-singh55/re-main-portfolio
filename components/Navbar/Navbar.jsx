@@ -1,24 +1,28 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import styles from "./Navbar.module.css";
-import { useRouter } from "next/router";
 
 function Navbar() {
-    const router = useRouter();
+    const [active, setActive] = useState({
+        home: true,
+        about: false,
+        projects: false,
+        contact: false
+    });
 
     return (
         <div className={styles.container}>
             <div className={styles.button}>
-                <Link passHref href="#home"><i style={{ color: `${router.pathname === '/' || "/#home" ? "red" : "cyan"}` }} className="fas fa-house-damage" /></Link>
+                <Link passHref href="#home"><i onClick={() => setActive({ ...false, home: true })} style={{ color: `${active.home ? "red" : "cyan"}` }} className="fas fa-house-damage" /></Link>
             </div>
             <div className={styles.button}>
-                <Link passHref href="#about"><i style={{ color: `${router.pathname === '/#about' ? "red" : "cyan"}` }} className="fas fa-user-tie" /></Link>
+                <Link passHref href="#about"><i onClick={() => setActive({ ...false, about: true })} style={{ color: `${active.about ? "red" : "cyan"}` }} className="fas fa-user-tie" /></Link>
             </div>
             <div className={styles.button}>
-                <Link passHref href="#projects"><i style={{ color: `${router.pathname === '/#projects' ? "red" : "cyan"}` }} className="fas fa-laptop-code" /></Link>
+                <Link passHref href="#projects"><i onClick={() => setActive({ ...false, projects: true })} style={{ color: `${active.projects ? "red" : "cyan"}` }} className="fas fa-laptop-code" /></Link>
             </div>
             <div className={styles.button}>
-                <Link passHref href="#contact"><i style={{ color: `${router.pathname === '/#contact' ? "red" : "cyan"}` }} className="far fa-address-card" /></Link>
+                <Link passHref href="#contact"><i onClick={() => setActive({ ...false, contact: true })} style={{ color: `${active.contact ? "red" : "cyan"}` }} className="far fa-address-card" /></Link>
             </div>
         </div>
     );
