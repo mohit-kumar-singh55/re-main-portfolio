@@ -24,7 +24,7 @@
 }
 
 .button i {
-    transform: scale(1.4);
+    font-size: 1.4rem;
     transition: 0.3s;
 }
 

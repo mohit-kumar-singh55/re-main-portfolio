@@ -465,12 +465,12 @@
 .contact__media__links i {
     font-size: 2.2rem;
     color: #13ADC7;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .contact__media__links i:hover {
     color: #945DD6;
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.5);
 }
 
 
