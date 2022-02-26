@@ -9,27 +9,6 @@ import TypeIt from "typeit-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  // Home Animation
-  const variants = {
-    initial: {
-      opacity: 0,
-      y: 100
-    },
-    animate: {
-      opacity: 1,
-      y: 0
-    }
-  }
-
-  const stagger = {
-    initial: {},
-    animate: {
-      transition: {
-        staggerChildren: 0.5,
-      }
-    }
-  }
-
   return (
     <div>
       <Head>
@@ -41,8 +20,8 @@ export default function Home() {
       </Head>
 
       {/* Home */}
-      <motion.div variants={stagger} initial="initial" animate="animate" className={styles.container} id="home">
-        <motion.div variants={variants} className={styles.text__container}>
+      <div className={styles.container} id="home">
+        <motion.div whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.text__container}>
           <h2 className={styles.heading}>Hi<span className={styles.wave}>👋</span>, I&apos;m</h2>
           <h1 className={styles.gradient__text}>Mohit Kumar Singh</h1>
           <br />
@@ -70,14 +49,14 @@ export default function Home() {
           <Link href="/" ><a className={styles.btn}><span>Resume</span></a></Link>
           <div className={styles.sectionDivider} />
         </motion.div>
-        <motion.div variants={variants} className={styles.image__container}>
+        <motion.div whileInView={{ x: [100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.image__container}>
           <Image src={mks} alt="MKS" width="380px" height="380px" />
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* About */}
       <div className={styles.container__about} id="about">
-        <div className={styles.box}>
+        <motion.div className={styles.box} whileInView={{ y: [100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }}>
           <div className={styles.dot__container}>
             <span className={styles.dot} />
             <span className={styles.dot} />
@@ -108,32 +87,32 @@ export default function Home() {
                 }} />
             </strong></em></p>
           </div>
-        </div>
+        </motion.div>
 
         <div className={styles.languages}>
           <div className={styles.language__heading}>Technologies</div>
-          <div className={styles.circle__container}>
+          <motion.div whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.circle__container}>
             <span className={styles.circle}>React</span>
             <span className={styles.circle}>NextJS</span>
             <span className={styles.circle}>MongoDB</span>
             <span className={styles.circle}>NodeJS</span>
-          </div>
+          </motion.div>
         </div>
         <div className={styles.languages}>
           <div className={styles.language__heading}>Languages</div>
-          <div className={styles.circle__container}>
+          <motion.div whileInView={{ x: [100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.circle__container}>
             <span className={styles.circle}>Java</span>
             <span className={styles.circle}>JavaScript</span>
             <span className={styles.circle}>Python</span>
-          </div>
+          </motion.div>
         </div>
         <div className={styles.languages}>
           <div className={styles.language__heading}>Speaking Languages</div>
-          <div className={styles.circle__container}>
+          <motion.div whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.circle__container}>
             <span className={styles.circle}>Hindi</span>
             <span className={styles.circle}>English</span>
             <span className={styles.circle}>Japanese</span>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -145,7 +124,7 @@ export default function Home() {
         <div className={styles.projects}>
 
           {projects && projects.map((item) => (
-            <div className={styles.project__card} key={item.title}>
+            <motion.div whileInView={{ y: [-100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.project__card} key={item.title}>
               <Image src={item.image} alt="Projects" />
               <div className={styles.titleContent}>
                 <div className={styles.box__heading}><h2>{item.title}</h2></div>
@@ -164,7 +143,7 @@ export default function Home() {
                 <a href={item.visit} target="_blank" rel="noreferrer" className={styles.btn}><span>Live</span></a>
                 <a href={item.source} target="_blank" rel="noreferrer" className={styles.btn}><span>Code</span></a>
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -173,7 +152,7 @@ export default function Home() {
 
       {/* Contact */}
       <div className={styles.contact__container} id="contact">
-        <div className={styles.box}>
+        <motion.div className={styles.box} whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }}>
           <div className={styles.dot__container}>
             <span className={styles.dot} />
             <span className={styles.dot} />
@@ -197,7 +176,7 @@ export default function Home() {
               <a href="https://github.com/mohit-kumar-singh55" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
     </div>
