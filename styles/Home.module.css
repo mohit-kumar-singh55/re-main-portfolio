@@ -175,6 +175,7 @@
     border-radius: 6px;
     position: relative;
     flex-wrap: wrap;
+    box-shadow: 0 0 20px rgb(0 0 0 / 50%);
 }
 
 .dot__container {
