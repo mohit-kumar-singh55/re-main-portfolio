@@ -21,7 +21,7 @@ export default function Home() {
 
       {/* Home */}
       <div className={styles.container} id="home">
-        <motion.div whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.text__container}>
+        <motion.div whileInView={{ x: [-30, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.text__container}>
           <h2 className={styles.heading}>Hi<span className={styles.wave}>👋</span>, I&apos;m</h2>
           <h1 className={styles.gradient__text}>Mohit Kumar Singh</h1>
           <br />
@@ -49,7 +49,7 @@ export default function Home() {
           <Link href="/" ><a className={styles.btn}><span>Resume</span></a></Link>
           <div className={styles.sectionDivider} />
         </motion.div>
-        <motion.div whileInView={{ x: [100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.image__container}>
+        <motion.div whileInView={{ x: [30, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.image__container}>
           <Image src={mks} alt="MKS" width="380px" height="380px" />
         </motion.div>
       </div>
@@ -152,7 +152,7 @@ export default function Home() {
 
       {/* Contact */}
       <div className={styles.contact__container} id="contact">
-        <motion.div className={styles.box} whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }}>
+        <motion.div className={styles.box} whileInView={{ x: [-30, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }}>
           <div className={styles.dot__container}>
             <span className={styles.dot} />
             <span className={styles.dot} />
