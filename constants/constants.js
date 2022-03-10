@@ -9,7 +9,7 @@ export const projects = [
     image: spotify,
     tags: ['React', 'Next.js', 'Recoil', 'Next-Auth'],
     live: 'https://mks-spotify.netlify.app',
-    code: 'https://google.com',
+    code: 'https://github.com/mohit-kumar-singh55/Spotify',
     id: 0,
   },
   {
@@ -18,8 +18,17 @@ export const projects = [
     image: bloxy,
     tags: ['React', 'Next.JS', 'Tailwind', 'GraphCMS'],
     live: 'https://mks-bloxy.netlify.app',
-    code: 'https://google.com',
+    code: 'https://github.com/mohit-kumar-singh55/bloxy',
     id: 1,
+  },
+  {
+    title: 'Resume Builder',
+    description: "This is a Resume Builder made using Next.JS and used react-to-print library to print the resume.",
+    image: bloxy,
+    tags: ['React', 'Next.JS'],
+    live: 'https://resumety.netlify.app/https://mks-bloxy.netlify.app',
+    code: 'https://github.com/mohit-kumar-singh55/resume-builder-next',
+    id: 2,
   },
   {
     title: 'Kanban Board',
@@ -27,7 +36,7 @@ export const projects = [
     image: camby,
     tags: ['React'],
     live: 'https://camby.netlify.app',
-    code: 'https://google.com',
-    id: 2,
+    code: 'https://github.com/mohit-kumar-singh55/kanban',
+    id: 3,
   },
 ];
