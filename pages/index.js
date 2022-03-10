@@ -140,8 +140,8 @@ export default function Home() {
                 </ul>
               </div>
               <ul className={styles.utilityList}>
-                <a href={item.visit} target="_blank" rel="noreferrer" className={styles.btn}><span>Live</span></a>
-                <a href={item.source} target="_blank" rel="noreferrer" className={styles.btn}><span>Code</span></a>
+                <a href={item.live} target="_blank" rel="noreferrer" className={styles.btn}><span>Live</span></a>
+                <a href={item.code} target="_blank" rel="noreferrer" className={styles.btn}><span>Code</span></a>
               </ul>
             </motion.div>
           ))}

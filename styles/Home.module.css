@@ -336,7 +336,7 @@
 }
 
 
-.project__card img{
+.project__card img {
     border-radius: 5px;
 }
 
@@ -384,6 +384,7 @@
 .tagList {
     display: flex;
     flex-wrap: wrap;
+    gap: 15px;
     justify-content: space-around;
     padding: 1rem 2rem 2rem 2rem;
     list-style: none;
