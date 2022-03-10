@@ -335,6 +335,11 @@
     position: relative;
 }
 
+
+.project__card img{
+    border-radius: 5px;
+}
+
 .project__card:hover {
     box-shadow: 3px 3px 20px rgba(80, 78, 78, 1);
     transform: scale(1.05);
@@ -378,6 +383,7 @@
 
 .tagList {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 1rem 2rem 2rem 2rem;
     list-style: none;
