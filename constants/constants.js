@@ -1,6 +1,7 @@
 import spotify from "./images/spotify.png";
 import bloxy from "./images/bloxy.png";
 import camby from "./images/camby.png";
+import resume from "./images/resume.png";
 
 export const projects = [
   {
@@ -24,9 +25,9 @@ export const projects = [
   {
     title: 'Resume Builder',
     description: "This is a Resume Builder made using Next.JS and used react-to-print library to print the resume.",
-    image: bloxy,
+    image: resume,
     tags: ['React', 'Next.JS'],
-    live: 'https://resumety.netlify.app/https://mks-bloxy.netlify.app',
+    live: 'https://resumety.netlify.app',
     code: 'https://github.com/mohit-kumar-singh55/resume-builder-next',
     id: 2,
   },

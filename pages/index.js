@@ -9,6 +9,12 @@ import TypeIt from "typeit-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
+  const about = {
+    technologies: ["React", "NextJS", "MongoDB", "NodeJS"],
+    languages: ["Java", "JavaScript", "Python"],
+    sLanguages: ["Hindi", "English", "Japanese"],
+  }
+
   return (
     <div>
       <Head>
@@ -92,26 +98,25 @@ export default function Home() {
         <div className={styles.languages}>
           <div className={styles.language__heading}>Technologies</div>
           <motion.div whileInView={{ x: [-30, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.circle__container}>
-            <span className={styles.circle}>React</span>
-            <span className={styles.circle}>NextJS</span>
-            <span className={styles.circle}>MongoDB</span>
-            <span className={styles.circle}>NodeJS</span>
+            {about.technologies.map((item, index) => (
+              <span key={index} className={styles.circle}>{item}</span>
+            ))}
           </motion.div>
         </div>
         <div className={styles.languages}>
           <div className={styles.language__heading}>Languages</div>
           <motion.div whileInView={{ x: [30, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.circle__container}>
-            <span className={styles.circle}>Java</span>
-            <span className={styles.circle}>JavaScript</span>
-            <span className={styles.circle}>Python</span>
+            {about.languages.map((item, index) => (
+              <span key={index} className={styles.circle}>{item}</span>
+            ))}
           </motion.div>
         </div>
         <div className={styles.languages}>
           <div className={styles.language__heading}>Speaking Languages</div>
           <motion.div whileInView={{ x: [-30, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.circle__container}>
-            <span className={styles.circle}>Hindi</span>
-            <span className={styles.circle}>English</span>
-            <span className={styles.circle}>Japanese</span>
+            {about.sLanguages.map((item, index) => (
+              <span key={index} className={styles.circle}>{item}</span>
+            ))}
           </motion.div>
         </div>
       </div>
