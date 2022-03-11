@@ -129,7 +129,7 @@ export default function Home() {
         <div className={styles.projects}>
 
           {projects && projects.map((item) => (
-            <motion.div whileInView={{ y: [-100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.project__card} key={item.title}>
+            <motion.div whileInView={{ y: [100, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.project__card} key={item.title}>
               <Image src={item.image} alt="Projects" />
               <div className={styles.titleContent}>
                 <div className={styles.box__heading}><h2>{item.title}</h2></div>
