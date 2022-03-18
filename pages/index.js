@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from "../styles/Home.module.css";
 import mks from "../public/assets/mks.png";
-import Link from 'next/link';
 import { projects } from "../constants/constants";
 import TypeIt from "typeit-react";
 import { motion } from "framer-motion";
@@ -52,7 +51,7 @@ export default function Home() {
             <br />Trying to Build something new
           </p>
           <br />
-          <Link href="/" ><a className={styles.btn}><span>Resume</span></a></Link>
+          <a href="/public/assets/resume.pdf" target="_blank" className={styles.btn}><span>Resume</span></a>
           <div className={styles.sectionDivider} />
         </motion.div>
         <motion.div whileInView={{ x: [30, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.image__container}>
@@ -184,6 +183,6 @@ export default function Home() {
         </motion.div>
       </div>
 
-    </div>
+    </div >
   )
 }

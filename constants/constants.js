@@ -15,7 +15,7 @@ export const projects = [
   },
   {
     title: 'Blog',
-    description: "Personal Blog in Next.JS. In this I have used Tailwind for CSS, GraghQl which is a query language and GraphCMS as Content Management System.",
+    description: "Personal Blog in Next.JS. In this I have used Tailwind for CSS, GraghQL which is a query language and GraphCMS as Content Management System.",
     image: bloxy,
     tags: ['React', 'Next.JS', 'Tailwind', 'GraphCMS'],
     live: 'https://mks-bloxy.netlify.app',
