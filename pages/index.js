@@ -51,7 +51,7 @@ export default function Home() {
             <br />Trying to Build something new
           </p>
           <br />
-          <a href="/public/assets/resume.pdf" target="_blank" className={styles.btn}><span>Resume</span></a>
+          <a href="/assets/resume.pdf" download="Mohit Kumar Singh.pdf" target="_blank" className={styles.btn}><span>Resume</span></a>
           <div className={styles.sectionDivider} />
         </motion.div>
         <motion.div whileInView={{ x: [30, 0], opacity: [0, 1] }} transition={{ duration: 0.7 }} className={styles.image__container}>
